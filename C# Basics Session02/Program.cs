@@ -1,4 +1,8 @@
-﻿namespace C__Basics_Session02;
+﻿using System.Numerics;
+using System.Timers;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace C__Basics_Session02;
 class Book
 {
   public string Title;
@@ -12,10 +16,10 @@ internal class Program
         #region Q1
         ///Q01. Create a Book class with a Title (string) and Pages (int). Create a Book object and store it in a
         /// variable of type object.Print it.
-        Book b = new Book();
+        ///Book b = new Book();
 
-         b.Title = "Adham Book";
-         b.Pages = 300;
+         ///b.Title = "Adham Book";
+         ///b.Pages = 300;
 
      
 
@@ -28,13 +32,19 @@ internal class Program
         //Using the Book class above, print the result of calling ToString(), Equals() (compare book with
         //itself), GetHashCode(), and GetType() on book.
 
-        Console.WriteLine(b.ToString());
+        ///Console.WriteLine(b.ToString());
 
-        Console.WriteLine(b.Equals(b));
+       /// Console.WriteLine(b.Equals(b));
 
-        Console.WriteLine(b.GetHashCode());
+       /// Console.WriteLine(b.GetHashCode());
 
-        Console.WriteLine(b.GetType());
+        ///Console.WriteLine(b.GetType());
+        #endregion
+        #region Q3
+        //Look at the line below.Is it a compile - time error, a runtime error, or a logical error? Fix it.
+        //int pages = "464";
+        // Compile - Time Error
+        int pages = 464;
         #endregion
 
     }
