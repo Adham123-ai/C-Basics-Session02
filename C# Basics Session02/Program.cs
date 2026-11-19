@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel;
+using System.Drawing;
 using System.Numerics;
+using System.Runtime.Intrinsics.X86;
 using System.Timers;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -78,11 +80,27 @@ internal class Program
         #endregion
         #region Q7
         //Given string pagesText = "464";, convert it into an int using the Convert class.
-        string pagesText = "464";
-        int Pages = Convert.ToInt32(pagesText);
+        /// string pagesText = "464";
+        ///int Pages = Convert.ToInt32(pagesText);
 
-        Console.WriteLine(Pages);
+        /// Console.WriteLine(Pages);
         #endregion
+        #region Q8
+        // Given string yearText = "2023";, convert it using int.Parse().Then given string badText = "abc";,
+        // use int.TryParse() to safely try converting it, and print "Invalid number" if it fails.
+        string yearText = "2023";
+        Console.WriteLine(int.Parse(yearText));
+        string badText = "abc";
+        bool isparse = int.TryParse(badText, out int text);
+        if (isparse)
+        {
+            Console.WriteLine(text);
+        }
+        else
+        {
+            Console.WriteLine("Invalid number");
+        #endregion
+        }
     }
 }
 
