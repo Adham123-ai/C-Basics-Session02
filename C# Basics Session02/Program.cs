@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿using System.ComponentModel;
+using System.Numerics;
 using System.Timers;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -18,10 +19,10 @@ internal class Program
         /// variable of type object.Print it.
         ///Book b = new Book();
 
-         ///b.Title = "Adham Book";
-         ///b.Pages = 300;
+        ///b.Title = "Adham Book";
+        ///b.Pages = 300;
 
-     
+
 
         ///Console.WriteLine(book);
         ///Console.WriteLine($"the book title is {b.Title} \n the book pages is {b.Pages} ");
@@ -34,19 +35,35 @@ internal class Program
 
         ///Console.WriteLine(b.ToString());
 
-       /// Console.WriteLine(b.Equals(b));
+        /// Console.WriteLine(b.Equals(b));
 
-       /// Console.WriteLine(b.GetHashCode());
+        /// Console.WriteLine(b.GetHashCode());
 
         ///Console.WriteLine(b.GetType());
         #endregion
         #region Q3
-        //Look at the line below.Is it a compile - time error, a runtime error, or a logical error? Fix it.
-        //int pages = "464";
-        // Compile - Time Error
-        int pages = 464;
+        ///Look at the line below.Is it a compile - time error, a runtime error, or a logical error? Fix it.
+        ///int pages = "464";
+        /// Compile - Time Error
+       /// int pages = 464;
         #endregion
+        #region Q4
+        //Write code that divides 10 by 0 inside a try block, catches the exception, prints "Cannot divide by
+        //zero", and then prints "Done" in a finally block
+        int x = 2;
+        int y = 0;
+        try
+        {
+            int w = x / y;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Cannot divide by zero");
+        }
+        finally { Console.WriteLine("Done");
 
+        }
+        #endregion
     }
 }
 
