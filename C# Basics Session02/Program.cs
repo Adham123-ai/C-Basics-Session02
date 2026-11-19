@@ -88,21 +88,33 @@ internal class Program
         #region Q8
         // Given string yearText = "2023";, convert it using int.Parse().Then given string badText = "abc";,
         // use int.TryParse() to safely try converting it, and print "Invalid number" if it fails.
-        string yearText = "2023";
-        Console.WriteLine(int.Parse(yearText));
-        string badText = "abc";
-        bool isparse = int.TryParse(badText, out int text);
-        if (isparse)
-        {
-            Console.WriteLine(text);
-        }
-        else
-        {
-            Console.WriteLine("Invalid number");
+        ///string yearText = "2023";
+        ///Console.WriteLine(int.Parse(yearText));
+        ///string badText = "abc";
+        ///bool isparse = int.TryParse(badText, out int text);
+        ///if (isparse)
+        ///{
+        ///   Console.WriteLine(text);
+        ///}
+        ///else
+        ///{
+        ///    Console.WriteLine("Invalid number");
         #endregion
-        }
+        #region Q9
+        ///Given int pages = 464;, convert it into a string using ToString() and print its type using GetType()
+        ///to prove it's now a string.
+        int pages = 464;
+        string pagesText = pages.ToString();
+
+        Console.WriteLine(pagesText);
+
+        Console.WriteLine(pagesText.GetType());
+
+        #endregion
+
     }
 }
+
 
 
 
